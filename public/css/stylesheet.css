@@ -19,6 +19,7 @@
 	content: attr(data-icon);
 }
 #current_temp {
+	padding-left: 20px;
 	font-size: 4em;
 	font-weight: 100;
 }

@@ -43,7 +43,7 @@
      .done(function(json) {
        $("#current_temp").html(Math.round(json.currently.temperature)+"&#176:F");
        $("#current_summary").html(json.currently.summary);
-       $("#current_temp").attr("data-icon", icons[json.currently.icon]);
+       $(".w-icon").attr("data-icon", icons[json.currently.icon]);
       })
       .fail(function() {
         alert("Ajax failed to fetch data")
