@@ -18,18 +18,16 @@
 	font-family: 'MeteoconsRegular';
 	content: attr(data-icon);
 }
-
 #current_temp {
 	font-size: 4em;
-		font-weight: 100;
-
+	font-weight: 100;
 }
-
 #current_summary {
-	font-size: 1.5em;
-
+	font-size: 2.5em;
 }
-
+#location {
+		font-size: 2.5em;
+	}
 .content {
 	font-family: 'Roboto', serif;
 	text-align: center;
