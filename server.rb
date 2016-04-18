@@ -17,7 +17,7 @@ module  Good_weather
 		get "/:location" do
 			content_type :json
 		  place = params[:location]
-		  forecastKey = ENV['FORCAST_KEY']
+		  forecastKey = ENV['forcast_id']
 			uri = URI.encode("https://api.forecast.io/forecast/" + forecastKey +"/" + cities[place]['latitude'].to_s + "," + cities[place]['longitude'].to_s ) 
       @location = HTTParty.get(uri).to_json 
       erb :location
@@ -27,7 +27,7 @@ module  Good_weather
 			content_type :json
 		  latitude = params[:lat]
 		  longitude = params[:long]
-		  forecastKey = ENV['FORCAST_KEY']
+		  forecastKey = ENV['forcast_id']
 			uri = URI.encode("https://api.forecast.io/forecast/" + forecastKey +"/" + latitude + "," + longitude ) 
       @location = HTTParty.get(uri).to_json 
    

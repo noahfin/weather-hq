@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather HQ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="apple-touch" type="text/css"  href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAEDElEQVRoQ+2agW1UMQxA3Q1gAmCDMgEwATABMAEwATABMAEwATABbFCYADaADUCviivLSn6cxL+I3kWqVN39H/vFju04dyIHNk4OjFeOwDtb/FREXjsZ30Tk+c5yL6a/bAvfFZEvDu6riNw7Au+0AkcL77SwOu3RpUVkdQ+ziMwRGqMuzeS/RYTIOjOyLfxORB6LyHsReRJRaASYiREAMFF1BjoTWGGVMwQdBVZYnRzohyOuVF7MAL5WUhs53Y8udAT4gYh8bLgLboSQ6FgtPLZg0aGrTwR4WUh0NTrPpegRAUaPFGEL4Gnyo8AZ0CiNS/PH/zpIKT/LX21N0mCZfAS4B10LGChLDHhaQLeMDPQnEXnr4JmDiMw8dhA42bO8Ex6jwDpxJCU8E5EXzppRxVg8TlBA1WROp8ZZYJRoJX0sQlQnBXmL4L7fy4cozbM3yrM3AxZUS8/WAcMu7S2kVY5+zv7k+Gf3KK76KpC+eBfXZ047fKphYZhzaqxY2AsE8oeDBfTloGZ4Bpa0Fu/m16iMTGAsq248W4mp3j4yT+9ZvxBZwAQo27qh7ByKnhULeWhq99tRS7aeywD2rjzjxi392Ndn5stl184AtgcLgglWsOlk1SjEANIbY/XsvBylUYIUpEVBpnV1oQheBEMdt/51lP6TpcyGK9iAuOTW1qWt4ltuaN+xewx3ZvX3GNatrRfZz3tyz99bBbYH+uX9taGxjRNvTOP+ygK3FvbKAu/i0v4KpOVh9lqEHPzLPJiR5mpy7enM7mFc/VFv85bvP1DPZyhIytC6N6PCqulvZbDg4T70HqWlXf1u1zBoDfuY3b8UNNcn5rh4JcPCvvVKpTXTs25x2By8vKAZwChqlUop8gu9P5QsVVnMmQXsi/xlS5RGANtFR0rZmgWMUt4atb5UdPv5m440r8kEBsY39yg3qX2jUZVoz7nadiiBJTKnnMCygYFGYaxtB0rTftUetLc0gPcr/axU2NU9zL7laEju9VEZAKxtm3kWUi2ORX23Up+jZmbfWssik0Jj+kcwsxZmj2FJgFr9Jr7D0nQiW+C1Pc1iAOq3ge2ITgfFGWAfUFTp1jlVbx/umKsWC6rXLJ9LH6zWgq3JnHL3UeAWLABpkdSZ3Xc8fGwYCmgjwD3YIcHR/FSeS5MdBU4TOAhqH0/RIQK8JYjeM3s3miP1ytSCjPxIpgdNxti8hokAt+5nZyJlxm88mIN0WIv83b5aBBhr+BvBGVjmyQBmntqlXeg6JgqsLqjFfOg3UZX9mgXsockQ6NQ9lo4CL8Sc81czgRWaW4lwHPnfgYcNcAQeXrKxF7Jdekx6YscjKvgInHEFGl3t1fPwiBx99uAsPLNIqe9cdpROVX5msoMD/gsrDBVMBNT90AAAAABJRU5ErkJggg==">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+
+	<link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+	<div data-role="page" class="body">
+		<div data-role="panel" id="left-panel" data-theme="c">
+     	<ul data-theme="d" data-role="listview">
+     		<li data-icon="delete"><a href="#" data-rel="close">Close</a>
+     		</li>
+     		<li data-role="list-divider">Select a city</li>
+     		<li><a href="#" class="city" data-rel="close">Current Location</a></li>
+     		<li><a href="#" class="city" data-rel="close">Chicago</a></li>
+     		<li><a href="#" class="city" data-rel="close">Poughkeepsie</a></li>
+     		<li><a href="#" class="city" data-rel="close">Los Angeles</a></li>
+     		<li><a href="#" class="city" data-rel="close">Miami</a></li>
+     		<li><a href="#" class="city" data-rel="close">New York</a></li>
+     		<li><a href="#" class="city" data-rel="close">San Francisco</a></li>
+     	</ul>
+		</div><!-- /panel -->	
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>Weather HQ</h1>
+			<a href="#left-panel" data-icon="bars" data-iconpos="notext" data-iconpos="left" data-iconshadow="false">Menus</a>
+		</div>
+		<div data-role="content" class="content">
+			<h1 id="current_temp" class="icon" data-icon="B">65&#176;F </h1>
+			<P  id="current_summary">Partly Cloudy</P>
+			<p  id="location">Current Location</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
